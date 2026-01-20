@@ -55,7 +55,7 @@ const App: React.FC = () => {
   };
 
   const resetInvoice = () => {
-    if (confirm('هل أنت متأكد من إعادة تعيين الفاتورة؟')) {
+    if (confirm('هل أنت متأكد من إعادة تعيين البيان؟')) {
       setItems([{ id: '1', name: '', quantity: 1, price: 0 }]);
       setMaintenanceFee(0);
       setDate(new Date().toISOString().split('T')[0]);
@@ -79,7 +79,7 @@ const App: React.FC = () => {
       {/* Input Controls - Hidden during print */}
       <div className="no-print bg-white rounded-xl shadow-md p-6 mb-8">
         <div className="flex justify-between items-center mb-6">
-          <h1 className="text-2xl font-bold text-gray-800">إعداد الفاتورة</h1>
+          <h1 className="text-2xl font-bold text-gray-800">إعداد البيان</h1>
           <div className="flex gap-2">
             <button 
               onClick={resetInvoice}
@@ -125,7 +125,7 @@ const App: React.FC = () => {
           <table className="w-full mb-4">
             <thead>
               <tr className="bg-gray-50 text-right border-b">
-                <th className="p-3 font-semibold text-gray-600">الصنف</th>
+                <th className="p-3 font-semibold text-gray-600">بيان</th>
                 <th className="p-3 font-semibold text-gray-600 w-24 text-center">العدد</th>
                 <th className="p-3 font-semibold text-gray-600 w-32 text-center">السعر</th>
                 <th className="p-3 font-semibold text-gray-600 w-16"></th>
@@ -195,7 +195,7 @@ const App: React.FC = () => {
 
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-6xl font-bold text-[#1e3a5f] mb-4">فاتورة</h1>
+          <h1 className="text-6xl font-bold text-[#1e3a5f] mb-4">بيان</h1>
           <div className="flex justify-end text-lg font-bold">
              <span>التاريخ: {date.replace(/-/g, '/')}</span>
           </div>
@@ -207,7 +207,7 @@ const App: React.FC = () => {
             <thead>
               <tr className="bg-[#1e3a5f] text-white">
                 <th className="border border-white p-3 w-16 text-center">م</th>
-                <th className="border border-white p-3 text-center text-xl">الصنف</th>
+                <th className="border border-white p-3 text-center text-xl">بيان</th>
                 <th className="border border-white p-3 w-24 text-center">العدد</th>
                 <th className="border border-white p-3 w-40 text-center">السعر</th>
                 <th className="border border-white p-3 w-48 text-center">الاجمالي</th>
