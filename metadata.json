@@ -1,0 +1,5 @@
+{
+  "name": "Arabic Invoice Generator",
+  "description": "A professional RTL invoice generation tool with dynamic item management and print-ready formatting based on the provided design.",
+  "requestFramePermissions": []
+}
