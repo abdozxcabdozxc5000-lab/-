@@ -1,6 +1,6 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
-import { Plus, Trash2, Printer, RefreshCw, CheckCircle, FileDown } from 'lucide-react';
+import { Plus, Trash2, Printer, RefreshCw, FileDown } from 'lucide-react';
 import { InvoiceItem } from './types';
 
 const App: React.FC = () => {
