@@ -206,39 +206,39 @@ const App: React.FC = () => {
           <table className="w-full border-collapse">
             <thead>
               <tr className="bg-[#1e3a5f] text-white">
-                <th className="border border-white p-3 w-16 text-center">م</th>
-                <th className="border border-white p-3 text-center text-xl">بيان</th>
-                <th className="border border-white p-3 w-24 text-center">العدد</th>
-                <th className="border border-white p-3 w-40 text-center">السعر</th>
-                <th className="border border-white p-3 w-48 text-center">الاجمالي</th>
+                <th className="border border-white p-2 w-12 text-center">م</th>
+                <th className="border border-white p-2 text-center text-xl">بيان</th>
+                <th className="border border-white p-2 w-20 text-center">العدد</th>
+                <th className="border border-white p-2 w-32 text-center">السعر</th>
+                <th className="border border-white p-2 w-36 text-center">الاجمالي</th>
               </tr>
             </thead>
             <tbody>
               {items.map((item, index) => (
                 <tr key={item.id} className="bg-white">
-                  <td className="border border-gray-300 p-3 text-center font-bold">{index + 1}</td>
-                  <td className="border border-gray-300 p-3 text-right">{item.name || '---'}</td>
-                  <td className="border border-gray-300 p-3 text-center">{item.quantity}</td>
-                  <td className="border border-gray-300 p-3 text-center">{item.price.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 2 })}</td>
-                  <td className="border border-gray-300 p-3 text-center font-bold">{(item.quantity * item.price).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 2 })}</td>
+                  <td className="border border-gray-300 p-2 text-center font-bold">{index + 1}</td>
+                  <td className="border border-gray-300 p-2 text-right whitespace-nowrap">{item.name || '---'}</td>
+                  <td className="border border-gray-300 p-2 text-center">{item.quantity}</td>
+                  <td className="border border-gray-300 p-2 text-center">{item.price.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 2 })}</td>
+                  <td className="border border-gray-300 p-2 text-center font-bold">{(item.quantity * item.price).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 2 })}</td>
                 </tr>
               ))}
               
               {/* Summary Rows */}
               <tr>
                 <td colSpan={3} className="border-0"></td>
-                <td className="border border-gray-300 bg-gray-100 p-3 text-center font-bold">الاجمالي</td>
-                <td className="border border-gray-300 p-3 text-center font-bold">{subtotal.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 2 })}</td>
+                <td className="border border-gray-300 bg-gray-100 p-2 text-center font-bold">الاجمالي</td>
+                <td className="border border-gray-300 p-2 text-center font-bold">{subtotal.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 2 })}</td>
               </tr>
               <tr>
                 <td colSpan={3} className="border-0"></td>
-                <td className="border border-gray-300 bg-gray-100 p-3 text-center font-bold">الصيانة والنقل</td>
-                <td className="border border-gray-300 p-3 text-center font-bold">{maintenanceFee.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 2 })}</td>
+                <td className="border border-gray-300 bg-gray-100 p-2 text-center font-bold">الصيانة والنقل</td>
+                <td className="border border-gray-300 p-2 text-center font-bold">{maintenanceFee.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 2 })}</td>
               </tr>
               <tr className="bg-[#1e3a5f] text-white">
                 <td colSpan={3} className="border-0"></td>
-                <td className="border border-white p-3 text-center font-bold text-sm">الاجمالي شامل الصيانه والنقل</td>
-                <td className="border border-white p-3 text-center font-bold text-xl">{grandTotal.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 2 })}</td>
+                <td className="border border-white p-2 text-center font-bold text-sm">الاجمالي شامل الصيانه والنقل</td>
+                <td className="border border-white p-2 text-center font-bold text-xl">{grandTotal.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 2 })}</td>
               </tr>
             </tbody>
           </table>
